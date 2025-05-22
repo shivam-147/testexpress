@@ -15,6 +15,10 @@ app.get("/second", (req, res) => {
 app.get("/third", (req, res) => {
     res.send('Third router is running')
 })
+app.get('/user/:name', (req, res) => {
+    const name = req.params.name
+    res.send(`Hello, ${name}`)
+})
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`)
